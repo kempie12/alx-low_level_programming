@@ -2,18 +2,24 @@
 
 /**
  * print_last_digit - prints the last digit
- * @n: is the number
- * Return: value of the last digit
+ * @n: the number to check
+ * Return: Always 0 (okay)
  */
 
 int print_last_digit(int n)
 {
-	int ld = n % 10;
+	int ld;
 
-	if (ld < 0)
-		ld *= -1;
-
-	_putchar(ld + '0');
-
-	return (0);
+	if (n < 0)
+	{
+		ld = -1 * (n % 10);
+		_putchar(ld + '0');
+		return (ld);
+	}
+	else
+	{
+		ld = (n % 10);
+		_putchar(ld + '0');
+		return (ld);
+	}
 }
